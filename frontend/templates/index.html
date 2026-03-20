@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI DevOps Dashboard</title>
+</head>
+<body>
+    <h2>AI DevOps Autopilot</h2>
+
+    <textarea id="logs" rows="10" cols="60"></textarea><br><br>
+    <button onclick="analyze()">Analyze Logs</button>
+
+    <h3>Result:</h3>
+    <pre id="result"></pre>
+
+    <script>
+        function analyze() {
+            fetch('/analyze', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({logs: document.getElementById('logs').value})
+            })
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+            });
+        }
+    </script>
+</body>
+</html>
