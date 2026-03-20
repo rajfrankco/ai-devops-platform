@@ -1,25 +1,15 @@
-# 🚀 AI DevOps Platform (RAG + MLOps + GenAI)
+# AI DevOps Autopilot 🚀
 
-## 📌 Overview
-End-to-end AI platform integrating DevOps, MLOps, and GenAI.
+Self-healing DevOps system using AI + CI/CD + local infrastructure.
 
-## ⚙️ Tech Stack
-- AWS (EKS, S3)
-- Kubernetes
-- Terraform
-- MLflow
-- FAISS (RAG)
-- Prometheus + Grafana
-- LocalStack
+## Features
+- AI log analysis
+- Jenkins integration
+- LocalStack AWS simulation
+- PostgreSQL incident storage
+- RAG-based memory (FAISS)
 
-## 🔄 Architecture
-User → FastAPI → RAG → LLM → Response
+## Run Locally
 
-## 🚀 Features
-- CI/CD automation
-- Kubernetes deployment
-- RAG-based AI responses
-- Observability with Prometheus
-
-## 🧪 Run
-docker-compose up
+```bash
+docker-compose up -d
